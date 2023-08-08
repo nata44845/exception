@@ -7,8 +7,9 @@ public class Application {
 
     public static void main(String[] args) {
         // System.out.println(getFileSize(new File("123")));
-        System.out.println(divide(10, 0));
+        //System.out.println(divide(10, 0));
         //a();
+        int x = Integer.parseInt("A");
     }
 
     public static int divide(int a1, int a2) {
