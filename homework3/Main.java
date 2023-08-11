@@ -9,24 +9,24 @@ public class Main {
 
         public static void main(String[] args) {
             ParseData parseData = new ParseData(); 
-            InputData inputData = new InputData();
-            String[] data = new InputData().enterData();
-    
-            HashMap<String, Object> data = parseData.parseInputData(data); 
-            while (data.size() != 6) {
+            boolean flag = false;
+            String[] data = null;
+
+            while (!flag) {
                 try {
-                    throw new DataException();
-                } catch (DataException e) {
                     data = parseData.parseInputData();
+                    flag = true;
+                } catch (Exception e) {
+                    System.out.println(e);
                 }
             } 
     
-            String fileName = data.get("lastName") + ".txt"; 
+            String fileName = data[0] + ".txt"; 
             SaveService saveService = new SaveService(fileName); 
             
             StringBuilder sb = new StringBuilder();
-            for (String str : data.keySet()) {
-                sb.append(data.get(str));
+            for (String str : data) {
+                sb.append(str);
                 sb.append(" ");
             }
     
