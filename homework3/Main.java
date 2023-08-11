@@ -16,26 +16,23 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
             } 
-    
-            String fileName = data[0] + ".txt"; 
-            SaveService saveService = new SaveService(fileName); 
-            
+
             StringBuilder sb = new StringBuilder();
             for (String str : data) {
                 sb.append(str);
                 sb.append(" ");
             }
     
-            System.out.println(data);
-            System.out.println(fileName);
+            String fileName = data[0] + ".txt"; 
+            SaveService saveService = new SaveService(fileName);             
+    
             try {
                 saveService.saveData(sb.toString());
+                System.out.println("Данные сохранены");
             } catch (Exception e) {
                 System.out.println("Ошибка сохранения данных "+e);
             }
-                 
-            
-    
+
         }
 
     
