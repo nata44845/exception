@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 public class InputData {
 
     public String[] enterData() {
