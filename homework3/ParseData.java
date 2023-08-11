@@ -1,16 +1,19 @@
 import java.util.HashMap;
 
+import Exception.DataException;
+import Exception.DateException;
+import Exception.SexException;
+
 public class ParseData {
-    public HashMap<String, Object> parsInputData() {
-        InputData inputData = new InputData();
-        String[] data = inputData.enterData();
+
+    public HashMap<String, Object> parseInputData(String[] data) {
         HashMap<String, Object> dataDic = new HashMap<>();
         StringBuilder sb = new StringBuilder();
         for (String i : data) {
             if (i.length() == 1) {
                 if (i.equals("f") || i.equals("m")) {
                     dataDic.put("sex", i);
-                } else{
+                } else {
                     try {
                         throw new SexException();
                     } catch (SexException e) {
@@ -80,11 +83,12 @@ public class ParseData {
                     }
                     if (!flag) {
                         dataDic.put("date", i);
-                    } else try {
-                        throw new DataException();
-                    } catch (DataException e) {
-                        e.dataException(i);
-                    }
+                    } else
+                        try {
+                            throw new DataException();
+                        } catch (DataException e) {
+                            e.dataException(i);
+                        }
                 }
 
             } else if (i.matches("[0-9]+")) {
@@ -106,4 +110,5 @@ public class ParseData {
             dataDic.put("patronymic", fullName[2]);
         }
         return dataDic;
+    }
 }

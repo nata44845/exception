@@ -1,18 +1,19 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Map;
 
 public class SaveService {
+    String fileName;
 
-    public void saveData(Map<String, String> map, String path) throws IOException {
-        try (FileWriter writer = new FileWriter(path, true)) {
-            for (Map.Entry<String, String> entry : map.entrySet()) {
-                writer.write(entry.toString());
-                writer.write("\n");
-                writer.flush();
-            }
-        }
-        catch (IOException e) {
+    public SaveService(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public void saveData(String data) throws IOException {
+        try (FileWriter writer = new FileWriter(fileName, true)) {
+            writer.append(data);
+            writer.write("\n");
+            writer.flush();
+        } catch (IOException e) {
             throw new IOException(e);
         }
     }
