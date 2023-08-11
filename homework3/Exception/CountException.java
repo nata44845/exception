@@ -1,6 +1,6 @@
 package Exception;
 
-public class CountException extends RuntimeException{
+public class CountException extends Exception{
     public CountException() {
     }
 

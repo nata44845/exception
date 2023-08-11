@@ -4,7 +4,7 @@ import Exception.CountException;
 
 public class InputData {
 
-    public String[] enterData() {
+    public String[] enterData() throws CountException {
         Scanner scanner = null;
         scanner = new Scanner(System.in);
         while (true) {
