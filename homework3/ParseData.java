@@ -15,7 +15,7 @@ public class ParseData {
 
         //Проверка длины Фамилии и имени
         if (data[0].length()==0 || data[1].length()==0) {
-                throw new DataException("Фамилия или имя");
+            throw new DataException("Фамилия или имя");
         }
 
         // Проверка даты
@@ -25,15 +25,20 @@ public class ParseData {
                     Integer.parseInt(arrayDate[0]) > 31 || Integer.parseInt(arrayDate[1]) < 0 ||
                     Integer.parseInt(arrayDate[1]) > 12 || Integer.parseInt(arrayDate[2]) < 0 ||
                     Integer.parseInt(arrayDate[1]) > 2022) {
-                    throw new DateException(data[3]);
+                throw new DateException(data[3]);
             }
         } else {
-                throw new DateException(data[3]);
+            throw new DateException(data[3]);
+        }
+
+        //Проверка телефона
+        if (!data[4].matches("[0-9]+")) {
+
         }
 
         // Проверка пола
         if (!(data[5].equals("f") || data[5].equals("m"))) {
-                throw new SexException(data[5]);
+            throw new NumberFormatException(data[4]);
         }
 
         return data;
