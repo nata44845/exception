@@ -1,4 +1,3 @@
-import Exception.CountException;
 import Exception.DataException;
 import Exception.DateException;
 import Exception.SexException;
@@ -9,12 +8,9 @@ public class ParseData {
         InputData inputData = new InputData();
         String[] data = inputData.enterData();
 
-        while (data.length != 6) {
-            try {
-                data = inputData.enterData();
-            } catch (CountException e) {
-                System.out.println(e.getMessage());
-            }
+        while (data == null) {
+            System.out.println("Неверное количество параметров");
+            data = inputData.enterData();
         }
 
         //Проверка длины Фамилии и имени
