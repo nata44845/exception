@@ -9,3 +9,7 @@ Ivanov Ivan Ivanovich 23.1.2003  f
 Ivanov Ivan Ivanovich 12.12.2034  f 
 Ivanov Ivan Iv 12.12.2023  f 
 Ivanov Ivan Iva 12.11.2014  f 
+Ivanov Ivan Ivanovich 12.12.1998 ddf f 
+Ivanov Ivan Ivanovich 2.3.2005 4343 f 
+Ivanov Ivan Ivanovich 2.3.2005 5555 f 
+Ivanov ivan s 12.12.2005  f 

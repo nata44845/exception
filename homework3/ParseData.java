@@ -32,13 +32,13 @@ public class ParseData {
         }
 
         //Проверка телефона
-        if (!data[4].matches("[0-9]+")) {
-
+        if (data[4]!="" && !data[4].matches("[0-9]+")) {
+            throw new NumberFormatException("Неверный формат телефона "+data[4]);
         }
 
         // Проверка пола
         if (!(data[5].equals("f") || data[5].equals("m"))) {
-            throw new NumberFormatException(data[4]);
+            throw new SexException(data[5]);
         }
 
         return data;
