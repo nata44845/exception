@@ -17,7 +17,7 @@ public class Main {
                     data = parseData.parseInputData();
                     flag = true;
                 } catch (Exception e) {
-                    System.out.println(e);
+                    System.out.println(e.getMessage());
                 }
             } 
     

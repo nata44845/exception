@@ -8,8 +8,8 @@ public class SexException extends Exception {
         super(message);
     }
 
-    public void sexException(String i) {
-        System.out.printf("Ошибочный параметр: %s", i);
-        System.out.println();
+    public String getMessage(String i) {
+        return String.format("Неверный формат пола (f/m): %s", i);
+
     }
 }

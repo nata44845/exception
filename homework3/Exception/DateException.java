@@ -8,8 +8,7 @@ public class DateException extends Exception {
         super(message);
     }
 
-    public void dataException(String i) {
-        System.out.printf("Неверный формат даты: %s", i);
-        System.out.println();
+    public String getMessage(String i) {
+        return String.format("Неверный формат даты: %s", i);
     }
 }

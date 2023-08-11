@@ -1,2 +1,7 @@
 Ivanov Petr Ivanovich 03.12.2055 22323 f 
 Ivanov Petr petrovich 13.12.2003 43 m 
+Ivanov Ivan Ivanovich 12.12.2000  f 
+Ivanov Ivan Ivanovich 12.12.2000  f 
+Ivanov Ivan Ivanovich 12.12.2003 4 f 
+Ivanov Ivan Ivanovich 12.12.2003 4 f 
+Ivanov Ivan Ivanovich 12.12.2003 44 f 
