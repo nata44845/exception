@@ -15,7 +15,7 @@ public class InputData {
             if (arrayData.length == 6) {
                 return arrayData;
             } else {
-                throw new CountException(CountException.getMessage(" "+arrayData.length));
+                throw new CountException(String.valueOf(arrayData.length));
             }
         }
     }

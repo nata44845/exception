@@ -5,10 +5,10 @@ public class DateException extends Exception {
     }
 
     public DateException(String message) {
-        super(message);
+        super(String.format("Неверный формат даты: %s", message));
     }
 
-    public String getMessage(String i) {
-        return String.format("Неверный формат даты: %s", i);
-    }
+    // public String getMessage(String i) {
+    //     return String.format("Неверный формат даты: %s", i);
+    // }
 }

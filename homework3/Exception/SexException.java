@@ -5,11 +5,10 @@ public class SexException extends Exception {
     }
 
     public SexException(String message) {
-        super(message);
+        super(String.format("Неверный формат пола (f/m): %s", message));
     }
 
-    public String getMessage(String i) {
-        return String.format("Неверный формат пола (f/m): %s", i);
-
-    }
+    // public String getMessage(String i) {
+    //     return String.format("Неверный формат пола (f/m): %s", i);
+    // }
 }

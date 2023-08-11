@@ -22,7 +22,7 @@ public class ParseData {
             try {
                 throw new DataException();
             } catch (DataException e) {
-                throw new DataException(e.getMessage("Фамилия или имя"));
+                throw new DataException("Фамилия или имя");
             }
         }
 
@@ -36,14 +36,14 @@ public class ParseData {
                 try {
                     throw new DateException();
                 } catch (DateException e) {
-                    throw new DateException(e.getMessage(data[3]));
+                    throw new DateException(data[3]);
                 }
             }
         } else {
             try {
                 throw new DateException();
             } catch (DateException e) {
-                throw new DateException(e.getMessage(data[3]));
+                throw new DateException(data[3]);
             }
         }
 
@@ -52,7 +52,7 @@ public class ParseData {
             try {
                 throw new SexException();
             } catch (SexException e) {
-                throw new SexException(e.getMessage(data[5]));
+                throw new SexException(data[5]);
             }
         }
 
