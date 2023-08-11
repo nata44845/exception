@@ -3,7 +3,7 @@ package Task3;
 import java.io.FileNotFoundException;
 
 public class task3 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         try {
             int a = 90;
             int b = 3;
