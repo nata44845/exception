@@ -7,7 +7,7 @@ public class DataException extends Exception{
         super(message);
     }
 
-    public static String getMessage(String i) {
+    public String getMessage(String i) {
         return String.format("Нулевая длина пераметра: %s", i);
     }
 }

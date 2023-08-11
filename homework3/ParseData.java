@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 import Exception.CountException;
 import Exception.DataException;
 import Exception.DateException;
@@ -28,11 +26,9 @@ public class ParseData {
             }
         }
 
-
         // Проверка даты
         if (data[3].matches("\\d{1,2}\\.\\d{1,2}\\.\\d{4}")) {
             String[] arrayDate = data[3].split("\\.");
-            boolean flag = true;
             if (Integer.parseInt(arrayDate[0]) < 0 ||
                     Integer.parseInt(arrayDate[0]) > 31 || Integer.parseInt(arrayDate[1]) < 0 ||
                     Integer.parseInt(arrayDate[1]) > 12 || Integer.parseInt(arrayDate[2]) < 0 ||
